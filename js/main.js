@@ -36,6 +36,8 @@ for (i = 0; i < pokemons.length; i++) {
   var elImg = document.createElement("img");
   var elName = document.createElement("h2");
   var elType = document.createElement("p");
+  var elHeight = document.createElement("p");
+  var elWeight = document.createElement("p");
   var elSpawnTime = document.createElement("p");
   elRow.setAttribute("class", "row");
   elRow.classList.add("g-5");
@@ -48,6 +50,8 @@ for (i = 0; i < pokemons.length; i++) {
   elBox.appendChild(elImg);
   elBox.appendChild(elName);
   elBox.appendChild(elType);
+  elBox.appendChild(elHeight);
+  elBox.appendChild(elWeight);
   elBox.appendChild(elSpawnTime);
   elId.innerHTML = pokemons[i].id;
   elId.classList.add("h4", "text-center", "text-white");
@@ -57,6 +61,10 @@ for (i = 0; i < pokemons.length; i++) {
   elName.classList.add("text-warning", "text-center");
   elType.innerHTML = pokemons[i].type;
   elType.classList.add("h5", "text-danger", "text-center");
+  elHeight.innerHTML = pokemons[i].height;
+  elHeight.classList.add("h5", "text-center", "text-light");
+  elWeight.innerHTML = pokemons[i].weight;
+  elWeight.classList.add("fs-5", 'fw-semibold', "text-center", "text-warning", "text-opacity-75")
   elSpawnTime.innerHTML = pokemons[i].spawn_time;
   elSpawnTime.classList.add(
     "h6",
