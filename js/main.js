@@ -75,5 +75,3 @@ for (i = 0; i < pokemons.length; i++) {
     "rounded-2"
   );
 }
-
-// console.log(pokemons);
