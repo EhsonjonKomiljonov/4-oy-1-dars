@@ -114,7 +114,7 @@ elHtml.style.backgroundSize = "700px 250px, 100%";
 var elRow = document.querySelector(".row");
 var elSelect = document.querySelector(".js-select");
 
-var pokemonsType = [
+var pokemonsTypes = [
   "Grass",
   "Fire",
   "Water",
@@ -134,7 +134,7 @@ var pokemonsType = [
 
 var filteredPokemons = pokemons;
 
-for (var i of pokemonsType) {
+for (var i of pokemonsTypes) {
   var option = document.createElement("option");
   option.value = i;
   option.textContent = i;
