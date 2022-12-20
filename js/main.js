@@ -134,16 +134,15 @@ var pokemonsTypes = [
 
 var filteredPokemons = pokemons;
 
-for (var i of pokemonsTypes) {
+for (var j of pokemonsTypes) {
   var option = document.createElement("option");
-  option.value = i;
-  option.textContent = i;
+  option.value = j;
+  option.textContent = j;
   elSelect.appendChild(option);
 }
 
 elSelect.addEventListener("change", (el) => {
   var type = el.target.value;
-  console.log(type);
   if (type == "All") {
     return displayPokemons(pokemons);
   }
@@ -157,7 +156,6 @@ displayPokemons(filteredPokemons);
 
 function displayPokemons(pokemons) {
   elRow.innerHTML = "";
-  // if (elSelect.value != "All") {
   for (i = 0; i < pokemons.length; i++) {
     var elCol = document.createElement("div");
     var elBox = document.createElement("div");
@@ -210,5 +208,51 @@ function displayPokemons(pokemons) {
       "rounded-2"
     );
   }
-  // }
 }
+
+const elSelect2 = document.querySelector(".js-select-two");
+elSelect2.addEventListener("change", () => {
+  // if (elSelect2.value == "id") {
+  //   pokemons.sort((a, b) => {
+  //     if (a.name < b.name && a.name > b.name) {
+  //       return 1;
+  //     }
+  //   });
+  // }
+
+
+
+
+  // ------------------------ USTOZ SHU ID DIGANI BOSILGANDA HAMMASI O'Z HOLIGA QAYTADIGAN QILOMADIM☝ FILMSDAYAM SHUNAQA ----------------------
+
+
+
+
+  
+  if (elSelect2.value != "id") {
+    if (elSelect2.value == "A--Z") {
+      const POKEMONS__SORT = pokemons.sort((a, b) => {
+        if (a.name < b.name) {
+          return -1;
+        }
+        if (a.name > b.name) {
+          return 1;
+        }
+        return 0;
+      });
+      displayPokemons(POKEMONS__SORT);
+    }
+    if (elSelect2.value == "Z--A") {
+      const POKEMONS__SORT = pokemons.sort((a, b) => {
+        if (a.name < b.name) {
+          return 1;
+        }
+        if (a.name > b.name) {
+          return -1;
+        }
+        return 0;
+      });
+      displayPokemons(POKEMONS__SORT);
+    }
+  }
+});

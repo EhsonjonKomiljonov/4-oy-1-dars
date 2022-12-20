@@ -1,6 +1,13 @@
 .js-select{
   position: absolute;
-  top: 130px;
+  top: 120px;
   right: 200px;
-  width: 100px !important;
+  width: 130px !important;
+}
+
+.js-select-two{
+  position: absolute;
+  top: 170px;
+  right: 200px;
+  width: 130px !important;
 }
