@@ -291,9 +291,8 @@ elRow.addEventListener("click", (evt) => {
     const findedPokemon = pokemons.find((el) => el.id == pokemonId);
     
     bookmarkList.add(findedPokemon);
-    
-    settedBookmark(bookmarkList, elBookmarkList);
   }
+  settedBookmark(bookmarkList, elBookmarkList);
 });
 
 elBookmarkList.addEventListener("click", (evt) => {
@@ -304,6 +303,6 @@ elBookmarkList.addEventListener("click", (evt) => {
 
     bookmarkList.delete(findedPokemon);
 
-    settedBookmark(bookmarkList, elBookmarkList);
   }
+  settedBookmark(bookmarkList, elBookmarkList);
 });
